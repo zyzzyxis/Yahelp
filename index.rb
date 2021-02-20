@@ -66,12 +66,15 @@ res2 = {
 @user_arr = [user1, user2]
 @res_arr = [res1, res2]
 
+
+
 # OBJECTIVES
 # method w/ param restuarant, returns the menu of the param
 def food_list 
   @res_arr
 end
 
+puts res2[:dishes][0][:ingredients][0] #returns both
 
 def restuarant_menu(menu_full)
   name = menu_full[:name]
@@ -84,9 +87,22 @@ puts restuarant_menu(res1)
 
 
 # method param restuarant, return avg review
+def avg_review
+  @res_arr.each do |res|
+      #need to take the res reviews then the rating from user 1 and 
+      #the rating from user 2 and then average them together with a label
+  end
+end
 
+puts avg_review
+
+# getting reviews
+puts res2[:reviews][0][:rating]
+puts res2[:reviews][0][:rating]
+#to get average, take the number of reviews, add them all up, then divide by the number of reviews
 
 # create array of restuarant and do crud actions
+# create read update delete 
 
 
 # method to return address
@@ -103,12 +119,24 @@ puts address_ret(res2)
 def days_op(open)
   id = open[:id]
   name = open[:name]
-  days = open[:days_open]
+  days = open[:days_open].gsub(',', ', ') 
   return "#{id}: #{name} is open on the following days: #{days}"
 end
 puts days_op(res2)
 
-# method takes a restuarant and updates it to your array
 
+# a simple method that takes restaurants and updates that to your array
+
+# loop through your restaurants and return those with likes > 500 (select/filter)
+def popular_res
+    @res_arr.each do |res|
+      if res[:likes] > 600
+        return "The following restuarant is popular: #{res[:name]}"
+      end
+    end
+end
+
+puts popular_res
+      
 
 
