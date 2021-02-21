@@ -98,7 +98,7 @@ puts avg_review
 
 # getting reviews
 puts res2[:reviews][0][:rating]
-puts res2[:reviews][0][:rating]
+puts res2[:reviews][1][:rating]
 #to get average, take the number of reviews, add them all up, then divide by the number of reviews
 
 # create array of restuarant and do crud actions
