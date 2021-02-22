@@ -86,42 +86,37 @@ end
 puts restuarant_menu(res1) 
 
  
-# method param restuarant, return avg review
-def avg_review
-  @res_arr.each do |res|
-      #need to take the res reviews then the rating from user 1 and 
-      #the rating from user 2 and then average them together with a label
-  end
-end
+# # method param restuarant, return avg review
+# def avg_review
+#   @res_arr.each do |res|
+#       #need to take the res reviews then the rating from user 1 and 
+#       #the rating from user 2 and then average them together with a label
+#   end
+# end
 
-puts avg_review
-
-
+# puts avg_review
 
 
-ratings = @res_arr[:reviews][0][:rating][1].to_i
-puts ratings
+
+
+# ratings = @res_arr[:reviews][0][:rating][1].to_i
+# puts ratings
 
 def avg_rev2
-  sum = 0
-  ratings = @res_arr[:reviews][0][:rating]
-  int.each do |a| 
-    (sum + a) end 
-  sum = sum / @res_arr[:reviews][0][:rating].count()
-  return sum
+  # sum = 0
+  @res_arr.each do |x|
+    x[:reviews].each do |y|
+      puts y[:rating]
+    end
+  end
 end
-
 puts avg_rev2
 
-#   array = [1,4,5,3,2,1,4,5,4,3]
-#   sum = 0
-# array.each { |a| (sum+=a) }
-# sum = sum / array.count()
-# puts sum
+
 
 # getting reviews
-puts res2[:reviews][0][:rating]
-puts res2[:reviews][1][:rating]
+# puts res2[:reviews][0][:rating]
+# puts res2[:reviews][1][:rating]
 #to get average, take the number of reviews, add them all up, then divide by the number of reviews
 
 # create array of restuarant and do crud actions
@@ -161,5 +156,8 @@ end
 
 puts popular_res
       
+
+
+
 
 
