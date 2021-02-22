@@ -96,6 +96,29 @@ end
 
 puts avg_review
 
+
+
+
+ratings = @res_arr[:reviews][0][:rating][1].to_i
+puts ratings
+
+def avg_rev2
+  sum = 0
+  ratings = @res_arr[:reviews][0][:rating]
+  int.each do |a| 
+    (sum + a) end 
+  sum = sum / @res_arr[:reviews][0][:rating].count()
+  return sum
+end
+
+puts avg_rev2
+
+#   array = [1,4,5,3,2,1,4,5,4,3]
+#   sum = 0
+# array.each { |a| (sum+=a) }
+# sum = sum / array.count()
+# puts sum
+
 # getting reviews
 puts res2[:reviews][0][:rating]
 puts res2[:reviews][1][:rating]
