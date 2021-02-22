@@ -110,7 +110,7 @@ def avg_rev2
     end
   end
 end
-puts avg_rev2
+avg_rev2
 
 
 
