@@ -85,7 +85,7 @@ end
 
 puts restuarant_menu(res1) 
 
-
+ 
 # method param restuarant, return avg review
 def avg_review
   @res_arr.each do |res|
