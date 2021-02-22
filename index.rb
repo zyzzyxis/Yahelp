@@ -66,7 +66,9 @@ res2 = {
 @user_arr = [user1, user2]
 @res_arr = [res1, res2]
 
-
+def separate
+  puts "----------"
+end
 
 # OBJECTIVES
 # method w/ param restuarant, returns the menu of the param
@@ -74,9 +76,10 @@ def food_list
   @res_arr
 end
 
-puts res2[:dishes][0][:ingredients][0] #returns both
+# puts res2[:dishes][0][:ingredients][0] #returns both
 
 def restuarant_menu(menu_full)
+  separate
   name = menu_full[:name]
   food = menu_full[:dishes][0][:name]
   cost = menu_full[:dishes][0][:price]
@@ -102,15 +105,18 @@ puts restuarant_menu(res1)
 # ratings = @res_arr[:reviews][0][:rating][1].to_i
 # puts ratings
 
-def avg_rev2
-  # sum = 0
-  @res_arr.each do |x|
-    x[:reviews].each do |y|
-      puts y[:rating]
-    end
+def avg_rev3(res_name1)
+  separate
+  sum = 0
+  rating = res_name1[:reviews].each do |y|
+    sum+=y[:rating]
   end
+  average = sum / rating.length
+  name = res_name1[:name]
+  puts "The average rating of #{name} is #{average} "
 end
-avg_rev2
+avg_rev3(res1)
+avg_rev3(res2)
 
 
 
@@ -125,20 +131,22 @@ avg_rev2
 
 # method to return address
 def address_ret(res_name)
-  id = res_name[:id]
+ # id = res_name[:id]
+ separate
   name = res_name[:name]
   address1 = res_name[:location][:city]
   address2 = res_name[:location][:state]
-  return "#{id}: The location of #{name} is #{address1}, #{address2}"
+  return "The location of #{name} is #{address1}, #{address2}"
 end
 puts address_ret(res2)
 
 # method to return days of operation
 def days_op(open)
-  id = open[:id]
+  #id = open[:id]
+  separate
   name = open[:name]
   days = open[:days_open].gsub(',', ', ') 
-  return "#{id}: #{name} is open on the following days: #{days}"
+  return "#{name} is open on the following days: #{days}"
 end
 puts days_op(res2)
 
@@ -147,6 +155,7 @@ puts days_op(res2)
 
 # loop through your restaurants and return those with likes > 500 (select/filter)
 def popular_res
+  separate
     @res_arr.each do |res|
       if res[:likes] > 600
         return "The following restuarant is popular: #{res[:name]}"
@@ -157,7 +166,7 @@ end
 puts popular_res
       
 
-
+separate
 
 
 
